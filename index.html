@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدقة جارية | أ. مروة</title>
+    <meta name="description"
+        content="صفحة صدقة جارية مخصصة للدعاء والاستغفار والتسبيح على روح المرحومة أ. مروة. نسأل الله أن يتقبلها ويجعلها في ميزان حسناتها.">
+
+    <!-- Fonts: Cairo and Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        beige: {
+                            50: '#FDFBF7',
+                            100: '#F9F6F0',
+                            200: '#F2EFE9',
+                        },
+                        islamic: {
+                            50: '#F0F4F0',
+                            100: '#E8F5E9',
+                            600: '#4A6741',
+                            700: '#3D5535',
+                            800: '#2E3F28',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --base-font-size: 16px;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            font-size: var(--base-font-size);
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .amiri-text {
+            font-family: 'Amiri', serif;
+        }
+
+        .counter-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="bg-beige-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 min-h-screen">
+
+    <!-- Navbar / Controls -->
+    <nav
+        class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-beige-200 dark:border-gray-700">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="font-bold text-lg text-islamic-700 dark:text-islamic-100">صدقة جارية</h1>
+            <div class="flex items-center gap-4">
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()"
+                    class="p-2 rounded-full hover:bg-beige-200 dark:hover:bg-gray-700 transition-colors"
+                    title="تبديل الوضع">
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden dark:block" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                    </svg>
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 block dark:hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-20">
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-islamic-700 dark:text-islamic-100">صدقة جارية على روح
+                المرحومة بإذن الله</h2>
+            <div class="relative inline-block mt-4">
+                <p
+                    class="text-3xl font-bold text-gray-500 underline decoration-dotted decoration-islamic-600 underline-offset-8">
+                    أ. مروة </p>
+            </div>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-6">
+                اللهم اجعل هذا العمل خالصاً لوجهك الكريم ثواباً جارياً لها، واغفر لها وارحمها وتجاوز عنها يا أرحم
+                الراحمين.
+            </p>
+        </section>
+
+        <!-- Main Dua Section -->
+        <section id="dua-section"
+            class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-beige-200 dark:border-gray-700 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-islamic-100/30 dark:bg-islamic-800/20 rounded-bl-full -z-0">
+            </div>
+
+            <h3 class="text-2xl font-semibold mb-8 text-islamic-600 dark:text-islamic-300 relative z-10">دعاء للمتوفية
+            </h3>
+
+            <div class="amiri-text text-3xl md:text-4xl leading-relaxed text-gray-800 dark:text-gray-100 mb-10 relative z-10"
+                id="main-dua-text">
+                "اللهم اغفر لها وارحمها، وعافها واعف عنها، وأكرم نزلها، ووسع مدخلها، واغسلها بالماء والثلج والبرد، ونقها
+                من الخطايا كما نقيت الثوب الأبيض من الدنس، وأبدلها دارًا خيرًا من دارها، وأهلًا خيرًا من أهلها، وزوجًا
+                خيرًا من زوجها، وأدخلها الجنة، وأعذها من عذاب القبر ومن عذاب النار."
+            </div>
+
+            <p class="text-sm text-gray-500 mb-10">— رواه صحيح مسلم</p>
+
+            <div class="flex flex-wrap justify-center gap-4 relative z-10">
+                <button onclick="copyDua()"
+                    class="flex items-center gap-2 px-8 py-3 bg-beige-100 dark:bg-gray-700 hover:bg-beige-200 dark:hover:bg-gray-600 rounded-full transition-all text-sm font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                    </svg>
+                    نسخ الدعاء
+                </button>
+                <button onclick="markAsRead(this)"
+                    class="flex items-center gap-2 px-8 py-3 bg-islamic-600 text-white hover:bg-islamic-700 rounded-full transition-all shadow-lg shadow-islamic-600/20 text-sm font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    قرأت ودعوت لها
+                </button>
+            </div>
+            <div id="copy-toast"
+                class="hidden absolute top-4 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-xs">
+                تم النسخ بنجاح</div>
+        </section>
+
+        <!-- Istighfar Section -->
+        <section class="space-y-8">
+            <h3 class="text-2xl font-bold text-center text-islamic-700 dark:text-islamic-100">الاستغفار</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Short Istighfar -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-beige-200 dark:border-gray-700 text-center shadow-lg group">
+                    <p class="amiri-text text-2xl mb-8 min-h-[4rem] group-hover:text-islamic-600 transition-colors">
+                        أستغفر الله العظيم وأتوب إليه</p>
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="text-5xl font-bold tabular-nums text-islamic-700 dark:text-islamic-300"
+                            id="count-ist-1">0</div>
+                        <div class="flex gap-4">
+                            <button onclick="increment('ist-1')"
+                                class="counter-btn w-20 h-20 rounded-full bg-islamic-600 text-white flex items-center justify-center shadow-lg hover:bg-islamic-700 focus:outline-none focus:ring-4 focus:ring-islamic-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                            <button onclick="reset('ist-1')"
+                                class="p-4 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                                title="إعادة ضبط">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sayyid al-Istighfar -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-beige-200 dark:border-gray-700 text-center shadow-lg group">
+                    <p
+                        class="amiri-text text-xl mb-8 min-h-[4rem] leading-relaxed group-hover:text-islamic-600 transition-colors">
+                        "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك، وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما
+                        صنعت، أبوء لك بنعمتك علي، وأبوء بذنبي فاغفر لي فإنه لا يغفر الذنوب إلا أنت"
+                    </p>
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="text-5xl font-bold tabular-nums text-islamic-700 dark:text-islamic-300"
+                            id="count-ist-2">0</div>
+                        <div class="flex gap-4">
+                            <button onclick="increment('ist-2')"
+                                class="counter-btn w-20 h-20 rounded-full bg-islamic-600 text-white flex items-center justify-center shadow-lg hover:bg-islamic-700 focus:outline-none focus:ring-4 focus:ring-islamic-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                            <button onclick="reset('ist-2')"
+                                class="p-4 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                                title="إعادة ضبط">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasbeeh Section -->
+        <section class="space-y-8">
+            <h3 class="text-2xl font-bold text-center text-islamic-700 dark:text-islamic-100">التسبيح</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Subhan Allah -->
+                <div
+                    class="bg-islamic-50 dark:bg-gray-800 p-6 rounded-3xl border border-islamic-100 dark:border-gray-700 text-center shadow-md">
+                    <p class="amiri-text text-2xl mb-6 font-bold text-islamic-700 dark:text-islamic-300">سبحان الله</p>
+                    <div class="text-4xl font-bold tabular-nums mb-6" id="count-tsb-1">0 / 33</div>
+                    <div class="flex justify-center gap-3">
+                        <button onclick="increment('tsb-1', 33)"
+                            class="counter-btn w-16 h-16 rounded-full bg-islamic-600 text-white flex items-center justify-center shadow-lg hover:bg-islamic-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                        <button onclick="reset('tsb-1')"
+                            class="p-4 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 border border-islamic-100 dark:border-gray-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alhamdullilah -->
+                <div
+                    class="bg-islamic-50 dark:bg-gray-800 p-6 rounded-3xl border border-islamic-100 dark:border-gray-700 text-center shadow-md">
+                    <p class="amiri-text text-2xl mb-6 font-bold text-islamic-700 dark:text-islamic-300">الحمد لله</p>
+                    <div class="text-4xl font-bold tabular-nums mb-6" id="count-tsb-2">0 / 33</div>
+                    <div class="flex justify-center gap-3">
+                        <button onclick="increment('tsb-2', 33)"
+                            class="counter-btn w-16 h-16 rounded-full bg-islamic-600 text-white flex items-center justify-center shadow-lg hover:bg-islamic-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                        <button onclick="reset('tsb-2')"
+                            class="p-4 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 border border-islamic-100 dark:border-gray-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Allahu Akbar -->
+                <div
+                    class="bg-islamic-50 dark:bg-gray-800 p-6 rounded-3xl border border-islamic-100 dark:border-gray-700 text-center shadow-md">
+                    <p class="amiri-text text-2xl mb-6 font-bold text-islamic-700 dark:text-islamic-300">الله أكبر</p>
+                    <div class="text-4xl font-bold tabular-nums mb-6" id="count-tsb-3">0 / 34</div>
+                    <div class="flex justify-center gap-3">
+                        <button onclick="increment('tsb-3', 34)"
+                            class="counter-btn w-16 h-16 rounded-full bg-islamic-600 text-white flex items-center justify-center shadow-lg hover:bg-islamic-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                        <button onclick="reset('tsb-3')"
+                            class="p-4 rounded-full bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 border border-islamic-100 dark:border-gray-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 border-t border-beige-200 dark:border-gray-700 py-12 mt-20">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <p class="text-islamic-700 dark:text-islamic-100 font-bold text-lg">اللهم اجعلنا ممن يقال لهم: "قَدْ
+                غَفَرْتُ لَكُمْ"</p>
+            <p class="text-gray-500 text-sm italic">أسألكم الدعاء لها بالمغفرة والرحمة.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Init state
+        const state = {
+            'ist-1': parseInt(localStorage.getItem('ist-1')) || 0,
+            'ist-2': parseInt(localStorage.getItem('ist-2')) || 0,
+            'tsb-1': parseInt(localStorage.getItem('tsb-1')) || 0,
+            'tsb-2': parseInt(localStorage.getItem('tsb-2')) || 0,
+            'tsb-3': parseInt(localStorage.getItem('tsb-3')) || 0,
+
+            darkMode: localStorage.getItem('darkMode') === 'true'
+        };
+
+        // Dark Mode Logic
+        function updateDarkModeUI() {
+            if (state.darkMode) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+        function toggleDarkMode() {
+            state.darkMode = !state.darkMode;
+            localStorage.setItem('darkMode', state.darkMode);
+            updateDarkModeUI();
+        }
+
+
+
+        // Counter Logic
+        function updateCounterUI(id, limit = null) {
+            const el = document.getElementById(`count-${id}`);
+            if (limit) {
+                el.textContent = `${state[id]} / ${limit}`;
+                if (state[id] >= limit) {
+                    el.classList.add('text-green-600', 'dark:text-green-400');
+                } else {
+                    el.classList.remove('text-green-600', 'dark:text-green-400');
+                }
+            } else {
+                el.textContent = state[id];
+            }
+        }
+
+        function increment(id, limit = null) {
+            if (limit && state[id] >= limit) return;
+            state[id]++;
+            localStorage.setItem(id, state[id]);
+            updateCounterUI(id, limit);
+
+            // Haptic feedback (if available)
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(50);
+            }
+        }
+
+        function reset(id) {
+            if (confirm('هل تريد إعادة تعيين العداد؟')) {
+                state[id] = 0;
+                localStorage.setItem(id, 0);
+                const limit = id.startsWith('tsb') ? (id === 'tsb-3' ? 34 : 33) : null;
+                updateCounterUI(id, limit);
+            }
+        }
+
+        // Dua Logic
+        async function copyDua() {
+            const text = document.getElementById('main-dua-text').innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                const toast = document.getElementById('copy-toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 2000);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        }
+
+        function markAsRead(btn) {
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                تقبل الله منك
+            `;
+            btn.classList.replace('bg-islamic-600', 'bg-green-600');
+            btn.onclick = null;
+        }
+
+        // Initial Load
+        window.onload = () => {
+            updateDarkModeUI();
+
+            updateCounterUI('ist-1');
+            updateCounterUI('ist-2');
+            updateCounterUI('tsb-1', 33);
+            updateCounterUI('tsb-2', 33);
+            updateCounterUI('tsb-3', 34);
+        };
+    </script>
+</body>
+
+</html>
