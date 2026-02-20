@@ -99,28 +99,7 @@
             <h1 class="font-bold text-lg text-islamic-700 dark:text-islamic-100">صدقة جارية</h1>
             <div class="flex items-center gap-4">
 
-                <!-- Font Size Controls -->
-                <div class="flex items-center border-x border-beige-200 dark:border-gray-700 px-4 gap-2">
-                    <button onclick="changeFontSize(-2)" class="p-2 hover:text-islamic-600 transition-colors"
-                        title="تصغير الخط">
-                        <span class="text-sm font-bold">A-</span>
-                    </button>
-                    <button onclick="changeFontSize(2)" class="p-2 hover:text-islamic-600 transition-colors"
-                        title="تكبير الخط">
-                        <span class="text-xl font-bold">A+</span>
-                    </button>
-                </div>
 
-                <!-- Share Button -->
-                <button onclick="shareLink()"
-                    class="p-2 rounded-full hover:bg-beige-200 dark:hover:bg-gray-700 transition-colors"
-                    title="شارك الرابط">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6a3 3 0 100-2.684m0 2.684l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                    </svg>
-                </button>
 
                 <!-- Dark Mode Toggle -->
                 <button onclick="toggleDarkMode()"
@@ -356,68 +335,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Sadaqah Ideas Section -->
-            <section id="ideas-section" class="space-y-12 pb-12">
-                <h3 class="text-2xl font-bold text-center text-islamic-700 dark:text-islamic-100">أفكار لصدقة جارية</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div
-                        class="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-beige-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-                        <div
-                            class="w-12 h-12 bg-islamic-100 dark:bg-islamic-900/50 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-islamic-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">سقيا الماء وحفر الآبار</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">من أفضل الصدقات الجارية، عن
-                            النبي ﷺ قال: "أفضل الصدقة سقيا الماء".</p>
-                    </div>
-                    <div
-                        class="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-beige-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-                        <div
-                            class="w-12 h-12 bg-islamic-100 dark:bg-islamic-900/50 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-islamic-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">بناء المساجد والمراكز التعليمية</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">مساهمة في بناء بيت من بيوت
-                            الله، أو توفير مكان لطلب العلم.</p>
-                    </div>
-                    <div
-                        class="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-beige-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-                        <div
-                            class="w-12 h-12 bg-islamic-100 dark:bg-islamic-900/50 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-islamic-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l9-5-9-5-9 5 9 5zm0 0v6" />
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">تعليم العلم وطباعة المصاحف</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">قال ﷺ: "إذا مات ابن آدم
-                            انقطع عمله إلا من ثلاث: ... أو علم ينتفع به".</p>
-                    </div>
-                    <div
-                        class="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-beige-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-                        <div
-                            class="w-12 h-12 bg-islamic-100 dark:bg-islamic-900/50 rounded-2xl flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-islamic-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">كفالة الأيتام والأسر المتعففة</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">توفير حياة كريمة لمن انقطعت
-                            بهم السبل، وهي من أعظم القربات.</p>
-                    </div>
-                </div>
-            </section>
+
     </main>
 
     <footer class="bg-white dark:bg-gray-800 border-t border-beige-200 dark:border-gray-700 py-12 mt-20">
